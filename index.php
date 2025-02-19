@@ -59,14 +59,14 @@ try {
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'surbhisinha425@gmail.com';                     //SMTP username
-    $mail->Password   = 'muyn vbha zkej qhpp';                               //SMTP password
+    $mail->Username   = '';                     //SMTP username
+    $mail->Password   = '';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('surbhisinha425@gmail.com', 'Contact Form');
-    $mail->addAddress('surbhisinha224@gmail.com', 'SurbhiWebsite');     //Add a recipient
+    $mail->setFrom('');
+    $mail->addAddress('');     //Add a recipient
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Test Contact Form';
@@ -74,7 +74,7 @@ try {
 
 
      $mail->send();
-    // echo  "<div class = 'success' > Message has been sent! </div>" ;
+     echo  "<div class = 'success' > Message has been sent! </div>" ;
 } catch (Exception $e) {
     echo " <div class = 'alert'> Message could not be sent. </div>";
 }
